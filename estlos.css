@@ -1,3 +1,80 @@
-h1 {
-color: blue;
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
+.header{
+  
+    width: 95%;
+    max-width: 1200px ;
+    margin: 20px ;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:repeat(3, 1fr)  ;
+    
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "logo busqueda-bar opciones";
+}
+.header .logo{
+    grid-area: logo;
+    margin: 0;
+    padding: 3% auto;
+    width: 200px;
+    grid-area: logo;
+    
+}
+.header .busqueda-bar{
+ 
+    grid-area: busqueda-bar;
+    margin: 0;
+    
+    
+}
+.header .opciones{
+    grid-area: opciones;
+}
+
+.contenido{
+    width: 95%;
+    max-width: 1200px ;
+    margin: 20px ;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:repeat(4, 1fr)  ;
+    
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "lateral-filtro  lateral-vitrina lateral-vitrina lateral-vitrina"
+                         "lateral-filtro vacio paginacion paginacion";
+                        
+
+}
+.contenido .lateral-filtro{
+    
+    text-align: center;
+    grid-area: lateral-filtro;
+}
+.contenido .lateral-vitrina{
+   
+    text-align: center;
+    grid-area: lateral-vitrina;
+}
+.contenido .paginacion{
+    grid-area: paginacion;
+    text-align: right;
+}
+.vitrina{
+    width: 95%;
+    margin: 0px;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr)  ;
+    grid-template-rows: repeat(3, auto);
+}
+.producto{
+    padding: 15px 5px 300px 5px;
+    
+}
+
+
+
+
