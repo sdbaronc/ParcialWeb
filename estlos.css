@@ -9,7 +9,7 @@ body{
   
     width: 95%;
     max-width: 1200px ;
-    margin: 7px 10px 10px 20px ;
+    margin: 7px 10px 10px 10px ;
     display: grid;
     grid-gap: 20px;
     grid-template-columns:repeat(3, 1fr)  ;
@@ -41,6 +41,18 @@ body{
     align-self: center;
     justify-self: center;
     grid-area: opciones;
+    margin: 0;
+   
+}
+.iconos-opciones{
+    text-align: center;
+    color: #5ccb5f;
+    
+}
+.text-opciones{
+    font-size: 10px;
+    width: 100px;
+    text-align: center;
 }
 
 .contenido{
@@ -82,6 +94,24 @@ body{
     padding: 15px 5px 300px 5px;
     
 }
+.busqueda{
+    border: 1px #5ccb5f solid;
+    border-radius: 20px;
+}
+
+.text-bar{
+    border: 0;
+    outline: none;
+    width: 350px;
+    
+    
+    
+}
+.lupa{
+    padding: 7px 7px 0px 0px;
+    color: #5ccb5f;
+}
+
 
 @media screen and (max-width:960px) {
    .header{
