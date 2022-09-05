@@ -116,12 +116,15 @@ body {
   margin: 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3);
+  grid-template-rows: repeat(3,auto);
+  
 }
 
 .producto{
+  grid-template-rows: repeat(5.1fr);
   background-color: #Fff;
   align-content: center;
+  
 }
 .addCar{
   margin: 5%;
@@ -147,6 +150,9 @@ body {
   text-align: right;
   visibility: hidden;
   color: #009929;
+  position: relative;
+  
+  
 }
 .producto:hover .addCar {
   visibility: visible;
@@ -157,16 +163,19 @@ body {
 .producto.with-transform:hover  {
   border: 1px #F5F5F5 solid;
   background-color: #Fff;
-  display: flow-root;
+  
   z-index: 2;
   
   
   width: 120%;
-  height: 110%;
+  height: 100%;
   box-shadow: 0px 0px 3px 3px dimgray;
 
   
   
+}
+.producto:hover .producto{
+  display: block;
 }
 
 
@@ -412,7 +421,7 @@ input[type="range"] {
 
   margin-bottom: 0;
   justify-self: center;
-  width: 100%;
+  width: 90%;
 }
 .nombrepro{
   
@@ -437,4 +446,9 @@ input[type="range"] {
   color: #5ccb5f;
   margin-bottom: 0;
   padding-bottom: 10px;
+}
+.paginaBot{
+  border: 0;
+  background-color: #Fff;
+  width: 100%;
 }

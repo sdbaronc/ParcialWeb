@@ -32,12 +32,39 @@ const describepro =["El aceite esencial de clavo es conocido por sus increíbles
                     "Este aceite vegetal rico en vitaminas y antioxidantes te hará lucir una piel radiante. El aceite de argán te aportará la luminosidad y elasticidad que necesitas para presumir de belleza natural. Ideal para todo tipo de pieles y capaz de nutrir las capas profundas de la piel.",
                     "Este aceite vegetal rico en vitaminas y antioxidantes te hará lucir una piel radiante. El aceite de argán te aportará la luminosidad y elasticidad que necesitas para presumir de belleza natural. Ideal para todo tipo de pieles y capaz de nutrir las capas profundas de la piel."];
 const marcapro =["Bio Natura","Sensitive Pro","Siberian Natural","Terra Verda","Alquimia","Bio Natura","Sensitive Pro","Siberian Natural","Terra Verda","Alquimia","Bio Natura","Sensitive Pro","Siberian Natural","Terra Verda","Alquimia","Bio Natura","Sensitive Pro","Siberian Natural","Terra Verda","Alquimia","Bio Natura","Sensitive Pro","Siberian Natural","Terra Verda","Alquimia"]
+const npag=nombrepro.length/12
+const mod = npag%1
+let a =0
+if(mod>0){
+    a= parseInt(npag)+1
+}else{
+    a=parseInt(npag)
+}
+console.log(a)
+
+let paginas=''
+for(let p =0;p<npag;p++){
+    let q=p+1
+    paginas=paginas+'<div class="pagin"><button class="paginaBot" onclick="paginar()">'+q+'</button></div>'
+
+}
+document.getElementById("paginacion").innerHTML=paginas
+
+
+
 for(let i =0;i<12;i++ ){
     l=i+1
     
     document.getElementById(i).innerHTML='<div class="addFav"><i class="bi bi-heart" style="font-size:30px ;"></i></div><img class="imagenpro" src="/recursos/'+l+'.jpg" alt=""> <p class="nombrepro">'+nombrepro[i]+'</p> <p class="cantidadpro">'+cantidadpro[i]+'</p> <p class="marcapro">'+marcapro[i]+'</p> <p class="preciopro">'+preciopro[i]+' €</p><div class="addCar"><i class="bi bi-basket3 " style="font-size:20px ;"><button class="boton2">Añadir a la Cesta</button></div>';
 }
-
+function paginar(){
+    
+    for(let i =0;i<3;i++ ){
+        l=i+1
+        
+        document.getElementById(i).innerHTML='<div class="addFav"><i class="bi bi-heart" style="font-size:30px ;"></i></div><img class="imagenpro" src="/recursos/'+l+'.jpg" alt=""> <p class="nombrepro">'+nombrepro[i]+'</p> <p class="cantidadpro">'+cantidadpro[i]+'</p> <p class="marcapro">'+marcapro[i]+'</p> <p class="preciopro">'+preciopro[i]+' €</p><div class="addCar"><i class="bi bi-basket3 " style="font-size:20px ;"><button class="boton2">Añadir a la Cesta</button></div>';
+    }
+}
 
 
 
