@@ -89,7 +89,25 @@ body {
 
 .contenido .paginacion {
   grid-area: paginacion;
+  display: grid;
+  grid-template-columns: repeat(6,auto);
+  gap: 3px;
+  justify-content: center;
+
   text-align: right;
+}
+.pagin{
+  border: 1px #D3D3D3 solid;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  padding-top: 13px;
+  margin: 2px;
+  color:  grey;
+  
+
+
+
 }
 
 .vitrina {
@@ -101,10 +119,56 @@ body {
   grid-template-rows: repeat(3);
 }
 
-.producto {
-  padding: 15px 5px 300px 5px;
-
+.producto{
+  background-color: #Fff;
+  align-content: center;
 }
+.addCar{
+  margin: 5%;
+  visibility: hidden;
+  border-radius: 12px ;
+  justify-content: center;
+  border-color: #efa229;
+  background-color: #efa229;
+  color: #Fff;
+  width: 90%;
+  height: 30px;
+  text-align: center;
+  padding-top: 6px;
+  
+  
+  
+}
+.addCar:hover{
+  background-color: #5ccb5f;
+  
+}
+.addFav{
+  text-align: right;
+  visibility: hidden;
+  color: #009929;
+}
+.producto:hover .addCar {
+  visibility: visible;
+}
+.producto:hover .addFav {
+  visibility: visible;
+}
+.producto.with-transform:hover  {
+  border: 1px #F5F5F5 solid;
+  background-color: #Fff;
+  display: flow-root;
+  z-index: 2;
+  
+  
+  width: 120%;
+  height: 110%;
+  box-shadow: 0px 0px 3px 3px dimgray;
+
+  
+  
+}
+
 
 .busqueda {
   border: 1px #5ccb5f solid;
@@ -320,6 +384,12 @@ input[type="range"] {
   color: #fff;
   font-weight: bold;
 }
+.boton2{
+  color: #Fff;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0;
+}
 .botonFil{
   
   border: #009929 solid;
@@ -327,9 +397,13 @@ input[type="range"] {
   border-radius: 12px;
   width: 70%;
 }
+.botonFil:hover{
+  background-color: #efa229;
+  border: #efa229 solid;
+}
 .producto{
   display: grid;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   padding-bottom: 10px;
   justify-self: center;
   text-align: center;
@@ -338,12 +412,14 @@ input[type="range"] {
 
   margin-bottom: 0;
   justify-self: center;
-  width: 80%;
+  width: 100%;
 }
 .nombrepro{
-  margin-top: 0;
+  
  margin-bottom: 0px;
   font-weight: bold;
+  height: 60px;
+ 
 }
 .cantidadpro{
   margin-top: 10px;
@@ -360,4 +436,5 @@ input[type="range"] {
   font-weight: bold;
   color: #5ccb5f;
   margin-bottom: 0;
+  padding-bottom: 10px;
 }
