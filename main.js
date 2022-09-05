@@ -45,7 +45,7 @@ console.log(a)
 let paginas=''
 for(let p =0;p<npag;p++){
     let q=p+1
-    paginas=paginas+'<div class="pagin"><button class="paginaBot" onclick="paginar()">'+q+'</button></div>'
+    paginas=paginas+'<div class="pagin"><button class="paginaBot" onclick="paginar('+q+')">'+q+'</button></div>'
 
 }
 document.getElementById("paginacion").innerHTML=paginas
@@ -57,12 +57,15 @@ for(let i =0;i<12;i++ ){
     
     document.getElementById(i).innerHTML='<div class="addFav"><i class="bi bi-heart" style="font-size:30px ;"></i></div><img class="imagenpro" src="/recursos/'+l+'.jpg" alt=""> <p class="nombrepro">'+nombrepro[i]+'</p> <p class="cantidadpro">'+cantidadpro[i]+'</p> <p class="marcapro">'+marcapro[i]+'</p> <p class="preciopro">'+preciopro[i]+' €</p><div class="addCar"><i class="bi bi-basket3 " style="font-size:20px ;"><button class="boton2">Añadir a la Cesta</button></div>';
 }
-function paginar(){
-    
-    for(let i =0;i<3;i++ ){
-        l=i+1
+function paginar(n){
+    inicio=(n*11)-11
+    ima=inicio+1
+    for(let h =0;h<12;h++ ){
         
-        document.getElementById(i).innerHTML='<div class="addFav"><i class="bi bi-heart" style="font-size:30px ;"></i></div><img class="imagenpro" src="/recursos/'+l+'.jpg" alt=""> <p class="nombrepro">'+nombrepro[i]+'</p> <p class="cantidadpro">'+cantidadpro[i]+'</p> <p class="marcapro">'+marcapro[i]+'</p> <p class="preciopro">'+preciopro[i]+' €</p><div class="addCar"><i class="bi bi-basket3 " style="font-size:20px ;"><button class="boton2">Añadir a la Cesta</button></div>';
+        
+        document.getElementById(h).innerHTML='<div class="addFav"><i class="bi bi-heart" style="font-size:30px ;"></i></div><img class="imagenpro" src="/recursos/'+ima+'.jpg" alt=""> <p class="nombrepro">'+nombrepro[inicio]+'</p> <p class="cantidadpro">'+cantidadpro[inicio]+'</p> <p class="marcapro">'+marcapro[inicio]+'</p> <p class="preciopro">'+preciopro[inicio]+' €</p><div class="addCar"><i class="bi bi-basket3 " style="font-size:20px ;"><button class="boton2">Añadir a la Cesta</button></div>';
+        inicio=inicio+1
+        ima=ima+1
     }
 }
 

@@ -452,3 +452,6 @@ input[type="range"] {
   background-color: #Fff;
   width: 100%;
 }
+.paginaBot:hover{
+  color: #5ccb5f;
+}
